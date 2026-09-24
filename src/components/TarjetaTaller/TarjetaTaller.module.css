@@ -1,0 +1,52 @@
+.tarjeta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  padding: 1.25rem;
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.tarjeta h2 { font-size: 1.25rem; margin: 0; }
+.tarjeta p { margin: 0; }
+.categoria { opacity: 0.75; }
+
+/* según los datos */
+.disponible .relleno { background: var(--color-exito); }
+.pocos { border-color: var(--color-alerta); }
+.pocos .relleno { background: var(--color-alerta); }
+.completo { opacity: 0.55; }
+.completo .relleno { background: var(--color-peligro); }
+
+/* según el estado: va después para que gane sobre los anteriores */
+.expandida {
+  border-color: var(--color-primario);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.etiqueta {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--color-primario);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.barra {
+  height: 8px;
+  margin-top: 0.4rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-texto) 15%, transparent);
+  overflow: hidden;
+}
+.relleno { height: 100%; }
