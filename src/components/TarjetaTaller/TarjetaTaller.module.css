@@ -17,14 +17,14 @@
 .tarjeta p { margin: 0; }
 .categoria { opacity: 0.75; }
 
-/* según los datos */
+
 .disponible .relleno { background: var(--color-exito); }
 .pocos { border-color: var(--color-alerta); }
 .pocos .relleno { background: var(--color-alerta); }
 .completo { opacity: 0.55; }
 .completo .relleno { background: var(--color-peligro); }
 
-/* según el estado: va después para que gane sobre los anteriores */
+
 .expandida {
   border-color: var(--color-primario);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -51,7 +51,7 @@
 }
 .relleno { height: 100%; }
 
-/* vista en lista (Punto 3) */
+
 .horizontal {
   flex-direction: row;
   flex-wrap: wrap;
