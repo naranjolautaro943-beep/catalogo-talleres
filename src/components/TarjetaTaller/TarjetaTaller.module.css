@@ -50,3 +50,14 @@
   overflow: hidden;
 }
 .relleno { height: 100%; }
+
+/* vista en lista (Punto 3) */
+.horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+.horizontal .info,
+.horizontal .ocupacion { flex: 1 1 200px; }
+.horizontal .descripcion { flex-basis: 100%; }

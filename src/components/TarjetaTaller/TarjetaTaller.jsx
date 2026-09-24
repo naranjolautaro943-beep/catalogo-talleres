@@ -1,7 +1,8 @@
 import { useState } from "react";
+import Boton from "../Boton/Boton";
 import estilos from "./TarjetaTaller.module.css";
 
-export default function TarjetaTaller({ taller }) {
+export default function TarjetaTaller({ taller, horizontal }) {
   const { titulo, categoria, cupo, inscriptos, nuevo, descripcion } = taller;
   const [expandida, setExpandida] = useState(false);
 
@@ -13,6 +14,7 @@ export default function TarjetaTaller({ taller }) {
     estilos.tarjeta,
     estilos[estado],
     expandida && estilos.expandida,
+    horizontal && estilos.horizontal,
   ]
     .filter(Boolean)
     .join(" ");
@@ -34,9 +36,9 @@ export default function TarjetaTaller({ taller }) {
       </div>
 
       <div className={estilos.acciones}>
-        <button onClick={() => setExpandida(!expandida)}>
+        <Boton variante="secundario" onClick={() => setExpandida(!expandida)}>
           {expandida ? "Ocultar detalles" : "Ver detalles"}
-        </button>
+        </Boton>
       </div>
 
       {expandida && <p className={estilos.descripcion}>{descripcion}</p>}
