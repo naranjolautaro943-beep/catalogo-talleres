@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { talleres } from "./data/talleres";
 import TarjetaTaller from "./components/TarjetaTaller/TarjetaTaller";
-import Boton from "./components/Boton/Boton";
+
 
 export default function App() {
   const [tema, setTema] = useState("claro");

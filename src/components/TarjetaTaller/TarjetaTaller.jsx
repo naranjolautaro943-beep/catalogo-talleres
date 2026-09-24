@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Boton from "../Boton/Boton";
+import Boton from "./Boton/Boton";
 import estilos from "./TarjetaTaller.module.css";
 
 export default function TarjetaTaller({ taller, horizontal }) {
